@@ -1,0 +1,19 @@
+.button-container img{
+    height: 26px;
+    background-color: transparent;
+    border: 0;
+}
+
+.button-container button{
+    /* height: 26px; */
+    background-color: transparent;
+    border: 0;
+}
+
+.button-container img:hover{
+    background: #19A7CE;
+    color: #fff;
+    border-color: #fff;   
+    transition: background-color 0.5s;
+    border-radius: 20px;
+}

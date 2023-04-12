@@ -1,0 +1,25 @@
+.container-categoria h1{
+    color: black;
+}
+.form h2{
+    color: black;
+    text-align: center;
+}
+.categoria-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.categoria-div p{
+    color: red;
+}
+
+@media(max-width: 1400px) {
+    .categoria-div {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

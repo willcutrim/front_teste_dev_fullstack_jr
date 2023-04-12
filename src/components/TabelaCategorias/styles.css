@@ -1,0 +1,40 @@
+.content-table {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: black;
+
+}
+
+th,
+td {
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.title-table {
+    display: flex;
+    justify-content: center;
+}
+
+.title-table h1 {
+    color: black;
+}

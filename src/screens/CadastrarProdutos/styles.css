@@ -1,0 +1,37 @@
+.new-produto{
+    
+    margin-bottom: 1rem;
+    
+}
+
+.new-produto h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.form-control label {
+    margin-bottom: 0.5rem;
+    color: gray;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+
+}

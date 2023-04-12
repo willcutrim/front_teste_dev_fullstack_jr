@@ -1,0 +1,23 @@
+.card-fornecedor{
+    background-color:  #F6F1F1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    
+    margin: 14px 14px 10px;
+}
+
+.card-content{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card-content h3{
+    color: black;
+}
+
+.card-content p{
+    color: gray;
+}
