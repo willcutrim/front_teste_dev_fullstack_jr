@@ -1,5 +1,6 @@
 import { Fornecedor } from "../../dtos/fornecedorDTO";
 import './styles.css'
+import React from 'react'
 
 type ModalProps = {
     info: Fornecedor[] | any;
@@ -14,10 +15,10 @@ export function ModalFornecedor({ isOpen, onClose, title, info }: ModalProps) {
     if (!isOpen) {
         return null;
     }    
-    // console.log(info['address']['street'])
+    
     return (
 
-        <div className="modal-container-user">
+        <div className="modal-container-fornecedor">
             <h3>{title}</h3>
             <div className="modal-content-user">
                 <div className="comments-content-user">
