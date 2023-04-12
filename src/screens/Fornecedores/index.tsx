@@ -5,6 +5,8 @@ import './styles.css'
 import { Fornecedor } from '../../dtos/fornecedorDTO'
 import { api } from '../../services/api'
 import { ModalFornecedor } from '../../components/ModalFornecedor'
+import React from 'react'
+
 
 export function Fornecedores() {
 
