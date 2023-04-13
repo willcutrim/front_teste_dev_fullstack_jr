@@ -57,6 +57,7 @@ export function Categorias() {
                 </div>
                 <TabelaCategoria
                     data={categoria}
+                    
                 />
             </div>
 

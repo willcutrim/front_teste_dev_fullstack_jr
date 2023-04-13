@@ -14,7 +14,7 @@ export function Fornecedores() {
     const [fornecedoresModal, setFornecedoresModal] = useState<Fornecedor[]>([])
     const [isOpenModal, setIsOpenModal] = useState(false);
 
-    async function openModal(id: string) {
+    async function openModal(id: number) {
         try {
             setIsOpenModal(true)
             const { data } = await api.get(`fornecedores/${id}`);
@@ -24,6 +24,15 @@ export function Fornecedores() {
             console.log(error)
         }
 
+    }
+
+    async function deleteFornecedor(id: number){
+        try {
+            await api.delete(`fornecedores/${id}`)
+            setFornecedores(fornecedores.filter(fornecedores => fornecedores.id !== id))
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     async function fetchFornecedores() {
@@ -61,6 +70,7 @@ export function Fornecedores() {
                         nome_fantasia={item.nome_fantasia}
                         cnpj={item.cnpj}
                         onClick={() => openModal(item.id)}
+                        onClickDelete={() => deleteFornecedor(Number(item.id))}
                     />
 
                 ))}

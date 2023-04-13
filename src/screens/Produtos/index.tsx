@@ -13,6 +13,15 @@ export function Produtos() {
     const [produtoModal, setProdutoModal] = useState<ItemProduto[]>([])
     const [isOpenModal, setIsOpenModal] = useState(false);
 
+    async function deleteProduto(id: number){
+        try {
+            await api.delete(`produtos/${id}`)
+            setProduto(produto.filter(produto => produto.id !== id))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     async function openModal(id: number) {
         try {
             setIsOpenModal(true)
@@ -59,6 +68,7 @@ export function Produtos() {
                             descricao={item.descricao}
                             data={produto}
                             onClick={() => openModal(item.id)}
+                            onClickDelete={() => deleteProduto(item.id)}
                         />
 
                     ))}

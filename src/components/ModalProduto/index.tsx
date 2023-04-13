@@ -15,7 +15,6 @@ export function ModalProduto({ isOpen, onClose, title, info }: ModalProps) {
     if (!isOpen) {
         return null;
     }
-    console.log(info['razao_social'])
     
     return (
 
