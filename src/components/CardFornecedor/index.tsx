@@ -1,7 +1,10 @@
 import { Fornecedor } from '../../dtos/fornecedorDTO'
 import { Button } from '../Button'
 import './styles.css'
-import React from 'react'
+
+import info from '../../assets/information.svg'
+import deleteIcon from '../../assets/delete.svg'
+
 
 
 type Props = {
@@ -25,8 +28,13 @@ export function CardFornecedor({ data, onClick, nome_fantasia, cnpj, onClickDele
                 <div className='icon'>
                     <Button
                         onClick={onClick}
+                        btnIcon={info}
                     />
-                    <button onClick={onClickDelete}>deletar</button>
+                    <Button
+                        onClick={onClickDelete}
+                        btnIcon={deleteIcon}
+                    />
+                    
                 </div>
             </div>
         </div>
