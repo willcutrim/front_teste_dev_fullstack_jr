@@ -6,7 +6,8 @@ import './styles.css'
 import { ItemProduto } from "../../dtos/produtoDTO";
 import { ModalProduto } from "../../components/ModalProduto";
 
-import React from 'react'
+
+
 
 export function Produtos() {
     const [produto, setProduto] = useState<ItemProduto[]>([])
@@ -22,6 +23,17 @@ export function Produtos() {
         }
     }
 
+    async function openModalDois(id: number) {
+        try {
+            setIsOpenModal(true)
+            const { data } = await api.get(`produtos/${id}`);
+            
+            setProdutoModal(data)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
     async function openModal(id: number) {
         try {
             setIsOpenModal(true)
@@ -54,6 +66,7 @@ export function Produtos() {
     return (
         <>
             <NavBar />
+            
             <ModalProduto
                 isOpen={isOpenModal}
                 onClose={closeModal}

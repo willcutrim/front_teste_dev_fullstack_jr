@@ -1,6 +1,5 @@
 import { ItemProduto } from '../../dtos/produtoDTO';
 import './styles.css'
-import React from 'react'
 
 type ModalProps = {
     info: ItemProduto[] | any;
