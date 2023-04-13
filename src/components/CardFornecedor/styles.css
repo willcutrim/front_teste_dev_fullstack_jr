@@ -21,3 +21,8 @@
 .card-content p{
     color: gray;
 }
+
+.icon {
+    display: flex;
+    gap: 5px;
+}

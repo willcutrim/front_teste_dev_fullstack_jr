@@ -1,17 +1,18 @@
 import { Fornecedor } from "../../dtos/fornecedorDTO";
+
 import './styles.css'
-import React from 'react'
+
 
 type ModalProps = {
     info: Fornecedor[] | any;
     title: string;
     isOpen: boolean;
     onClose: () => void;
+    
 }
 
 
 export function ModalFornecedor({ isOpen, onClose, title, info }: ModalProps) {
-    
     if (!isOpen) {
         return null;
     }    
@@ -32,6 +33,14 @@ export function ModalFornecedor({ isOpen, onClose, title, info }: ModalProps) {
                         <p><strong>telefone:</strong> {info['telefone']}</p>
                         <p><strong>nome fantasia:</strong> {info['nome_fantasia']}</p>
                         <p><strong>cnpj:</strong> {info['cnpj']}</p>
+
+                        <h3>Endereço:</h3>
+                        <p><strong>rua:</strong> {info['endereco']['rua']}</p>
+                        <p><strong>Numero:</strong> {info['endereco']['numero']}</p>
+                        <p><strong>Bairro:</strong> {info['endereco']['bairro']}</p>
+                        <p><strong>Cidade:</strong> {info['endereco']['cidade']}</p>
+                        <p><strong>Estado:</strong> {info['endereco']['estado']}</p>
+                        <p><strong>CEP:</strong> {info['endereco']['cep']}</p>
                     </div>
                 </div>
             </div>

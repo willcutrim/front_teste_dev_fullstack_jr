@@ -8,9 +8,10 @@ type Props = {
     descricao: string;
     data?: ItemProduto[];
     onClick?: () => void;
+    onClickDelete?: () => void;
 }
 
-export function CardProduto({ data, onClick, nome, descricao }: Props) {
+export function CardProduto({ data, onClick, nome, descricao, onClickDelete }: Props) {
 
     return (
 
@@ -27,6 +28,7 @@ export function CardProduto({ data, onClick, nome, descricao }: Props) {
                 <Button
                     onClick={onClick}
                 />
+                <button onClick={onClickDelete}>Deletar</button>
             </div>
         </div>
     </div>

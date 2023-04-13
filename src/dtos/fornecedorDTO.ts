@@ -9,7 +9,7 @@ export interface Endereco {
 }
 
 export interface Fornecedor {
-    id: string;
+    id: number;
     endereco: Endereco;
     nome_fantasia: string;
     razao_social: string;
